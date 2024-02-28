@@ -1,5 +1,5 @@
 .Lover {
-  font-family: "Satisfaction"
+
 }
 .Fearless {
   font-family: "Satisfaction"
@@ -27,4 +27,39 @@
 }
 .Midnights {
   font-family: "Satisfaction"
+}
+html {
+  background-color: pink;
+}
+body {
+  background-color: lightcyan;
+  margin-left: inherit;
+  margin-right: inherit;
+  top: 0px;
+  height: 1000px;
+  display: block;
+}
+nav ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+nav {
+  background-color: pink;
+  float: left;
+  height: 1000px;
+  padding-top: 0px;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: blue;
+}
+h1 {
+  text-align: center;
+}
+.landing {
+  background-color: lightcyan;
 }
