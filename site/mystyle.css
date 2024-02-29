@@ -1,65 +1,87 @@
 .Lover {
-
+  font-family: "Brush Script MT", cursive;
 }
 .Fearless {
-  font-family: "Satisfaction"
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
 }
 .evermore {
-  font-family: "Satisfaction"
+  font-family: "Times";
+
 }
 .reputation {
-  font-family: "Satisfaction"
+  font-family: Impact, Haettenschweiler, "Franklin Goithic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans-serif";
 }
 .SpeakNow {
-  font-family: "Satisfaction"
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 .Red {
-  font-family: "Satisfaction"
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
 .folklore {
-  font-family: "Satisfaction"
+  font-family: "Times";
 }
 .NewYork {
-  font-family: "Satisfaction"
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 .SurpriseSongs {
-  font-family: "Satisfaction"
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 }
 .Midnights {
-  font-family: "Satisfaction"
+font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.index {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 html {
   background-color: pink;
 }
 body {
   background-color: lightcyan;
-  margin-left: inherit;
-  margin-right: inherit;
+  margin-left: auto;
+  margin-right: 225px;
   top: 0px;
   height: 1000px;
   display: block;
+  padding: 10px;
+  border-radius: 10px;
+
 }
 nav ul{
   list-style: none;
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
 
 }
 nav {
   background-color: pink;
   float: left;
   height: 1000px;
-  padding-top: 0px;
+  position: fixed;
+  font-size: 24px;
+  border-radius: 10px;
 }
 
 
 nav a {
   text-decoration: none;
-  color: blue;
+  color: palevioletred;
+  padding: 20px;
+
 }
 h1 {
   text-align: center;
 }
 .landing {
   background-color: lightcyan;
+  border-radius: 10px;
+}
+p, h1 {
+  margin-left: 225px;
+  color: darkblue;
+
+}
+p {
+  font-size: 24px;
+  padding: 10px;
 }
