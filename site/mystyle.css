@@ -41,7 +41,7 @@ body {
   margin-left: auto;
   margin-right: 225px;
   top: 0px;
-  height: 1000px;
+  height: 2000px;
   display: block;
   padding: 10px;
   border-radius: 10px;
@@ -71,17 +71,45 @@ nav a {
 }
 h1 {
   text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
 }
 .landing {
   background-color: lightcyan;
   border-radius: 10px;
 }
-p, h1 {
+h1, h2 {
   margin-left: 225px;
   color: darkblue;
+}
+
+.text {
+  border: 5px dotted darkblue;
+  font-size: 24px;
+  padding: 30px;
+  margin-left: 225px;
+}
+img {
+  width:300px;
+}
+.column {
+  padding: 20px;
+  flex: 50%;
+  gap:10px;
 
 }
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+.move {
+  margin-left: 225px;
+}
 p {
-  font-size: 24px;
-  padding: 10px;
+  font-size:24px;
 }
