@@ -39,7 +39,7 @@ html {
 body {
   background-color: lightcyan;
   margin-left: auto;
-  margin-right: 225px;
+  margin-right: auto;
   top: 0px;
   height: 2000px;
   display: block;
@@ -83,7 +83,7 @@ h2 {
   border-radius: 10px;
 }
 h1, h2 {
-  margin-left: 225px;
+  margin-left: 230px;
   color: darkblue;
 }
 
@@ -91,7 +91,7 @@ h1, h2 {
   border: 5px dotted darkblue;
   font-size: 24px;
   padding: 30px;
-  margin-left: 225px;
+  margin-left: 230px;
 }
 img {
   width:300px;
@@ -108,7 +108,7 @@ img {
   gap: 10px;
 }
 .move {
-  margin-left: 225px;
+  margin-left: 230px;
 }
 p {
   font-size:24px;
