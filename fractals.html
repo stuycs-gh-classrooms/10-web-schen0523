@@ -87,7 +87,7 @@
                 The modifications for this sierpinski triangle are:
                 <ol>
                   <li>Instead of drawing triangles, the turtle now draws hearts, but the hearts are still stacked into triangles.</li>
-                  <li> The hearts are filled in with a color from the range of (200, 256)</li>
+                  <li> The hearts are filled in with a color from the range of (200, 256).</li>
                 </ol>
                 <code>draw_sierpinski(t, 4, 50)</code>
               </p>
@@ -149,7 +149,7 @@
         t.bk(x/2)
         t.rt(90)
         t.fd(y)
-      t.lt(90)
+        t.lt(90)
               </code></pre>
             </div>
           </div>
@@ -187,7 +187,7 @@
 
               </p>
             </div>
-            <pre class = "contain"><code>def tree1(t, depth, length, angle):
+            <pre class = "contain"><code>def tree(t, depth, length, angle):
     t.width(5)
     t.pencolor("brown")
     if depth == 1:
@@ -204,11 +204,11 @@
     else:
         t.fd(length)
         t.rt(angle)
-        tree1(t, depth - 1, length, angle)
+        tree(t, depth - 1, length, angle)
         t.lt(angle)
-        tree1(t, depth - 1, length * 1.5, angle)
+        tree(t, depth - 1, length * 1.5, angle)
         t.lt(angle)
-        tree1(t, depth - 1, length, angle)
+        tree(t, depth - 1, length, angle)
         t.rt(angle)
         t.bk(length)
             </code></pre>
