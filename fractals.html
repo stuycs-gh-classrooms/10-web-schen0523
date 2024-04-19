@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>fractals</title>
+        <title>Fractals</title>
         <link href="fractals.css" rel="stylesheet">
     </head>
     <h1>Serena's Fractals</h1>
@@ -13,12 +13,12 @@
         <h3>Original Koch Curve</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/koch.png" alt="Original Koch Curve">
+            <img class= "image" src="images/koch.png" alt="Original Koch Curve">
           </div>
           <div class = "column">
-            <p>
-              omg crazy curve
-              hi
+            <p class = "contain">
+              This is a basic curve.
+              <br><code>koch_curve(t, 4, 20)</code></br>
             </p>
           </div>
         </div>
@@ -26,15 +26,39 @@
         <h3>My Koch Curve</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/koch1.png" alt="My Koch Curve">
+            <img class="image" src="images/koch1.png" alt="My Koch Curve">
           </div>
           <div class = "column">
-            <p>
-              omg crazy curve
-              hi
-            </p>
-            <pre><code>
-              python
+            <div class = "contain">
+              <p class = "bod">
+                The modifications for this koch curve are:
+                <ol>
+                  <li>Right turns have turned into left turns, and all left turns have turned into right turns.</li>
+                  <li>For every curve, two acute angles are drawn. After the first acute angle is drawn, the triangle is filled with a random color in a specific range.</li>
+                  <li>A new parameter is added, called width, where you can determine the width of the lines.</li>
+                </ol>
+                <code>draw_koch(t, 4, 20, 1)</code>
+              </p>
+            </div>
+            <pre class = "contain"><code>def draw_koch(t, depth, length, width):
+    t.width(width)
+    a = random.randrange(100, 256)
+    b = random.randrange(150, 256)
+    c = random.randrange(204, 256)
+    color = (a, b, c)
+    if depth == 1:
+        t.fd(length)
+    if depth > 1:
+        t.fillcolor(color)
+        t.begin_fill()
+        draw_koch(t, depth - 1, length, width)
+        t.rt(120)
+        draw_koch(t, depth - 1, length, width)
+        t.end_fill()
+        t.lt(60)
+        draw_koch(t, depth - 1, length, width)
+        t.rt(120)
+        draw_koch(t, depth - 1, length, width)
             </code></pre>
           </div>
         </div>
@@ -43,28 +67,91 @@
         <h3>Original Sierpinski Triangle</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/triangle.png" alt="Original Sierpinski Triangle">
+            <img class="image" src="images/triangle.png" alt="Original Sierpinski Triangle">
           </div>
           <div class = "column">
-            <p>
-              omg crazy triangel
-              hi
+            <p class = "contain">
+              This is a basic triangle.
+              <br><code>draw_sierpinski(t,5, 200)</code></br>
             </p>
           </div>
         </div>
         <h3>My Sierpinski Triangle</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/triangle2.png" alt="My Sierpinski Triangle">
+            <img class="image" src="images/triangle2.png" alt="My Sierpinski Triangle">
           </div>
           <div class = "column">
-            <p>
-              omg crazy triangel
-              hi
-            </p>
-            <pre><code>
-              python
-            </code></pre>
+            <div class = "contain">
+              <p class = "bod">
+                The modifications for this sierpinski triangle are:
+                <ol>
+                  <li>Instead of drawing triangles, the turtle now draws hearts, but the hearts are still stacked into triangles.</li>
+                  <li> The hearts are filled in with a color from the range of (200, 256)</li>
+                </ol>
+                <code>draw_sierpinski(t, 4, 50)</code>
+              </p>
+            </div>
+            <div class = "row">
+              <pre class = "column contain"><code>def heart(t, size):
+    t.lt(30)
+    t.fd(size)
+    t.lt(30)
+    t.fd(size / 2)
+    t.rt(30)
+    t.fd(size)
+    t.lt(60)
+    t.fd(size)
+    t.rt(30)
+    t.fd(size / 2)
+    t.rt(30)
+    t.fd(size)
+    t.rt(60)
+    t.fd(size)
+    t.rt(45)
+    t.fd(2.5 * size)
+    t.rt(45)
+    t.fd(size / 1.1)
+    t.rt(45)
+    t.fd(2.5 * size)
+    t.rt(45)
+    t.fd(size)
+    t.rt(90)
+              </code></pre>
+              <pre class = "column contain"><code>def draw_sierpinski(t, depth, length):
+    x = (length + length * (3 ** 0.5) * 2) * 0.5
+    y = (length * (6 + 5 * (2 ** 0.5)) / 4) * 0.5
+    a = random.randrange(200, 256)
+    b = random.randrange(200, 256)
+    c = random.randrange(200, 256)
+    color = (a, b, c)
+    if depth == 1:
+        t.pencolor(color)
+        t.fillcolor(color)
+        t.begin_fill()
+        heart(t, length)
+        t.end_fill()
+    else:
+        draw_sierpinski(t, depth - 1, length / 2)
+        t.pu()
+        t.fd(x)
+        t.pd()
+        draw_sierpinski(t, depth - 1, length / 2)
+        t.pu()
+        t.bk(x)
+        t.lt(90)
+        t.fd(y)
+        t.rt(90)
+        t.fd(x / 2)
+        t.pd()
+        draw_sierpinski(t, depth - 1, length / 2)
+        t.pu()
+        t.bk(x/2)
+        t.rt(90)
+        t.fd(y)
+      t.lt(90)
+              </code></pre>
+            </div>
           </div>
         </div>
 
@@ -73,27 +160,57 @@
         <h3>Original Tree</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/tree.png" alt="Original Tree">
+            <img class="image1" src="images/tree.png" alt="Original Tree">
           </div>
           <div class = "column">
-            <p>
-              omg crazy tree
-              hi
+            <p class = "contain">
+              This is a basic tree.
+              <br><code>tree(t, 4, 50, 30)</code></br>
             </p>
           </div>
         </div>
         <h3>My Tree</h3>
         <div class = "row">
           <div class = "column">
-            <img src="images/tree1.png" alt="My Treee">
+            <img class="image1" src="images/tree1.png" alt="My Treee">
           </div>
           <div class = "column">
-            <p>
-              omg crazy tree
-              hi
-            </p>
-            <pre><code>
-              python
+            <div class = "contain">
+              <p class = "bod">
+                The modifications for this tree are:
+                <ol>
+                  <li>Each branch is now brown, and the width is now 5.</li>
+                  <li>At the end of each branch, a green circle is drawn to act as the "leaves".</li>
+                  <li>Between every two branches, a branch 1.5 times the length of the two beside it is added.</li>
+                </ol>
+                <code>tree(t, 4, 40, 30)</code>
+
+              </p>
+            </div>
+            <pre class = "contain"><code>def tree1(t, depth, length, angle):
+    t.width(5)
+    t.pencolor("brown")
+    if depth == 1:
+        t.fd(length)
+        t.rt(90)
+        t.pencolor("green")
+        t.fillcolor("green")
+        t.begin_fill()
+        t.circle(length / 4)
+        t.end_fill()
+        t.pencolor("brown")
+        t.lt(90)
+        t.bk(length)
+    else:
+        t.fd(length)
+        t.rt(angle)
+        tree1(t, depth - 1, length, angle)
+        t.lt(angle)
+        tree1(t, depth - 1, length * 1.5, angle)
+        t.lt(angle)
+        tree1(t, depth - 1, length, angle)
+        t.rt(angle)
+        t.bk(length)
             </code></pre>
           </div>
         </div>

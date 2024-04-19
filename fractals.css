@@ -1,11 +1,49 @@
 .column {
   padding:0px 20px;
   flex: 50%;
-  gap:10px;
-
 }
 
 .row {
   display: flex;
   gap: 10px;
+}
+.image{
+  max-width: 600px;
+  height: auto;
+}
+
+.image1{
+  max-height:500px;
+  width: auto;
+}
+html {
+  background-color: paleturquoise;
+  font-family: Georgia, serif;
+}
+.contain{
+  background-color: lightcyan;
+  border: 5px dotted turquoise;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+
+}
+.bod{
+  margin: 0;
+}
+
+h3{
+  color: steelblue;
+  font-size: 20px;
+}
+h2{
+  color: teal;
+  font-size: 30px;
+}
+h1{
+  color: darkslateblue;
+  font-size: 35px;
+}
+h1, h2, h3{
+  margin-left: 20px;
 }
