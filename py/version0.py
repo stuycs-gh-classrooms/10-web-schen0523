@@ -52,24 +52,25 @@ data = cgi.FieldStorage()
 
 question2 = 'Oh no! You woke up too late, and missed your train! Unfortunately, there’s only one train time every year. Or, you think of other ways to get to school. <br> Do you:'
 options2 = ['Take your parents flying car', 'Send an owl to the Principle to get someone to come pick you up']
-pg2 = make_form(question2, options2)
-pg3 = 'You took the magic car… but it broke down and you landed in the forbidden forest. After you get out, Ms Mcgonadald catches you and… YOU WERE EXPELLED!'
+pg2 = '<h1>You Snooze, you Lose!</h1>'
+pg2 += make_form(question2, options2)
+pg3 = '<h1>Wow…Rebel</h1>\n<p>You took the magic car… but it broke down and you landed in the forbidden forest. After you get out, Ms Mcgonadald catches you and… YOU WERE EXPELLED!</p>'
 
 if (len(data) != 0):
     if ('choices' in data):
-        choice = data['name'].value
+        choice = data['choices'].value
     if choice == options1[0]:
         print(make_html('You Snooze, you Lose!',pg2))
-    else:
+    elif choice == options1[1]:
+        pg3 += '<br><a href="version0.py">Try Again</a>'
         print(make_html('Wow…Rebel', pg3))
+        
     
 #if no form data, return the form html instead of result
 else:
     print(start)
-# if choices == options1[0]:
-#     page2 = make_html('You Snooze, you Lose!', pg2)
-#     print(page2)
-#     
+
+  
 
 
 
