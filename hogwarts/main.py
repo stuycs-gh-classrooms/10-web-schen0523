@@ -50,7 +50,7 @@ def make_form(question, radio_options):
 
 def make_name(question):
     html = """
-    <form action="version0.py" method="GET">"""
+    <form action="main.py" method="GET">"""
     html += question
     html += """<br><input type="text" name="name" value="Dolores Umbridge">
     <br>
@@ -140,11 +140,11 @@ pg2 += make_form(question2, options2)
 
 #PAGE3
 pg3 = '<h1>Wow…Rebel</h1>\n<p>You took the magic car… but it broke down and you landed in the forbidden forest. After you get out, Ms Mcgonagall catches you and… YOU WERE EXPELLED!</p>'
-pg3 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg3 += 'The End...<br><a href="main.py">Try Again?</a>'
 
 #PAGE4
 pg4 = '<h1>Meet Hagrid!</h1>\n<p>Hagrid is sent to pick you up on his motorcycle. You get to school quickly in time for the big feast and to witness the new coming wizards and witches!</p>'
-pg4 += '<a href="version0.py?friends=Neville+Longbottom">Time for the Feast!</a>'
+pg4 += '<a href="main.py?friends=Neville+Longbottom">Time for the Feast!</a>'
 
 #PAGE5
 pg5 = '<h1>On the Train</h1>\n<p>On the train, your BFF is nowhere to be seen. You walk through, and all the compartments are filled, except for 1.</p>'
@@ -156,7 +156,7 @@ pg5 += "<p> You're forced to sit with " + options5 + ". They quickly become your
 #pg5 += make_friend(question5, options5)
 # pg5 += make_name('What is your name?')
 pg5 += '<p>You talk for the remainder of the commute to Mugwarts Magical High School, and arrive at a big feast waiting for you.</p>'
-pg5 += '<a href="version0.py?friends=Neville+Longbottom">Time for the Feast!</a>'
+pg5 += '<a href="main.py?friends=Neville+Longbottom">Time for the Feast!</a>'
 
 #PAGE6
 pg6 = '<h1>Time for a feast!</h1>'
@@ -199,7 +199,7 @@ pg11 += make_form(question11, options11)
 
 #PAGE12
 pg12 = '<h1>Error...</h1>\n<p>There was nothing useful in the book.</p>'
-pg12 += '<br><a href="version0.py?choices=The+3rd+floor+library">Try Another Book</a>'
+pg12 += '<br><a href="main.py?choices=The+3rd+floor+library">Try Another Book</a>'
 
 #PAGE13
 pg13 = '<h1>Open Sesame</h1>\n<p>You pulled on the book, and a staircase emerged! You and your friends follow it to a dark chamber. <br>Lumos!  <br>There are a hundred pixies carrying keys. Only one opens the door on the other side of the chamber. However, there are only two broomsticks for you to ride to find the key. </p>'
@@ -212,10 +212,10 @@ options13t = ['The Gryffindor Sword', 'A stone', 'Your Wand']
 
 #PAGE14
 pg14 = "<h1>You're Delusional... </h1>\n<p>Umm... Sorry but there is no Gryffindor Sword. The Dragon eats you and all your friends.</p>"
-pg14 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg14 += 'The End...<br><a href="main.py">Try Again?</a>'
 #PAGE15
 pg15 = '<h1>Rock beats Scissors</h1>\n<p>Yay! You killed the dragon by stabbing its heart with the small but sharp pebble. You saved everyone, including your BFF.</p>'
-pg15 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg15 += 'The End...<br><a href="main.py">Try Again?</a>'
 #PAGE16
 pg16 = '<h1>Finally using some magic…</h1>\n'
 question16 = 'Which spell would you like to use? '
@@ -224,29 +224,29 @@ pg16 += make_form(question16, options16)
 
 #PAGE17
 pg17 = '<h1>Stop. Drop. and Roll</h1>\n<p>Incendio lit the dragon on fire, but it’s fireproof, and got super pissed. It instead lights your friend on fire… They die… Your other friend who went to get help arrives just in time for you to save yourself and your BFF. You saved the school, but at what cost? </p>'
-pg17 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg17 += 'The End...<br><a href="main.py">Try Again?</a>'
 #PAGE18
 pg18 = '<h1>Clever, feed them their own Poison</h1>\n<p>You managed to petrify the beast! (How ironic!). Your friend who went to get help arrived to rescue everyone, and the teachers dealt with the dragon. You saved the school!</p>'
-pg18 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg18 += 'The End...<br><a href="main.py">Try Again?</a>'
 #PAGE19
 pg19 = '<h1>Squeaky Clean</h1>\n<p>There’s nothing in the bathroom… </p>'
-pg19 += '<br><a href="version0.py?choices=Ask+Hagrid+about+the+Chamber+of+Secrets">Go Back</a>'
+pg19 += '<br><a href="main.py?choices=Ask+Hagrid+about+the+Chamber+of+Secrets">Go Back</a>'
 #PAGE20
 pg20 = '<h1>No Trespassing!</h1>\n<p>You can’t get into the Hufflepuff common room, because you’re not a Hufflepuff! </p>'
-pg20 += '<br><a href="version0.py?choices=Ask+Hagrid+about+the+Chamber+of+Secrets">Go Back</a>'
+pg20 += '<br><a href="main.py?choices=Ask+Hagrid+about+the+Chamber+of+Secrets">Go Back</a>'
 #PAGE21
 pg21 = '<h1>Isn’t it Past Curfew!? </h1>\n<p>Professor McGonagall does not want students to be snooping around. She is no help, so you find another solution.</p>'
-pg21 += 'The End...<br><a href="version0.py?choices=next1">Find Another Solution</a>'
+pg21 += 'The End...<br><a href="main.py?choices=next1">Find Another Solution</a>'
 #PAGE22
 pg22 = '<h1>Password Please</h1>\n<p>The victim belongs to your dorm</p>'
 question22 = 'What is the password to your dorm?(Capitalization does matter)'
 pg22 += make_password(question22)
-pg22 += '<br><a href="version0.py?choices=Forgot+Password">Forgot Password</a>'
+pg22 += '<br><a href="main.py?choices=Forgot+Password">Forgot Password</a>'
 #add enter password and forgot password button
 
 #PAGE23
 pg23 = '<h1>You Forgot the Password!</h1>\n<p>You were stopped in your search, and could not find our what was happening. Mugwarts Magical High School was eaten by a dragon.</p>'
-pg23 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg23 += 'The End...<br><a href="main.py">Try Again?</a>'
 #add random number generator
 
 #PAGE24
@@ -260,14 +260,14 @@ pg24 += make_form(question24, options24)
 
 #PAGE25
 pg25 = "<h1>No one remembers the password!</h1>\n<p>Oh no… you couldn't get into your dorm, so you never figured out what happened. A large dragon shot out of the girls bathroom toilet and ended up killing everyone… MUGWARTS SCHOOL OF MAGIC IS DEAD…</p>"
-pg25 += 'The End...<br><a href="version0.py">Try Again?</a>'
+pg25 += 'The End...<br><a href="main.py">Try Again?</a>'
 #PAGE26
 pg26 = '<h1>You Took too Long…</h1>\n<p>The Mandrakes, which are needed to cure the petrified, took too long to grow. A large dragon ended up getting loose in the school and killed everyone… MUGWARTS SCHOOL OF MAGIC IS DEAD… </p>'
-pg26 += '<br><a href="version0.py">Try Again?</a>'
+pg26 += '<br><a href="main.py">Try Again?</a>'
 
 #PAGE27
 pg27 = "<h1>What a wimp!</h1>\n<p>You gave up because you were too scared...you couldn't uncover the truth.</p>"
-pg27 += '<br><a href="version0.py">Try Again?</a>'
+pg27 += '<br><a href="main.py">Try Again?</a>'
 
 def make_page3():
     html = make_html('Wow…Rebel', pg3)
@@ -298,7 +298,7 @@ def make_page71(house, body):
     body += "<br>Your password is DobbylovesMugwarts, be sure to remember this!<br>"
     body += "You've met your roommate, his name is Harry Potter, he's a pretty average guy.<br>"
     body += '<p>Zzzzzzz…</p><br>'
-    body += "<a href='version0.py?choices=next'>Next</a>"
+    body += "<a href='main.py?choices=next'>Next</a>"
 
 
     html = make_html(title, body)
@@ -306,7 +306,7 @@ def make_page71(house, body):
 
 def make_page73():
     html = make_html('A Few Weeks Later', add)
-    html += "<a href='version0.py?choices=next1'>Next</a>"
+    html += "<a href='main.py?choices=next1'>Next</a>"
     return html
 
 def make_page8():
